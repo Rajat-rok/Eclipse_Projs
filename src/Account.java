@@ -28,5 +28,18 @@ public class Account {
 		return accNo;
 	}
 	
-
+	
+	
+	
+	public static void main(String[] args) {
+		SavingsAccount Sa=new SavingsAccount(2000, 1234, "Sammy", 500);
+		Sa.getMinBal();
+		Sa.withdraw(1400);
+		Sa.withdraw(200);
+		Sa.toString();
+		
+		CurrentAccount Ca= new CurrentAccount(2000, 1234, "Jimmy", 500);
+		Ca.withdraw(2100);
+		Ca.withdraw(900);
+	}
 }
