@@ -8,18 +8,20 @@ public class CurrentAccount extends Account {
 		this.overdraftLimit = overdraftLimit;
 	}
 	
-    public void withdraw(int withAmt) {
+    public Boolean withdraw(int withAmt) {
         if (this.balance - withAmt < (-overdraftLimit)){
-            System.out.println("Only Balance is " + this.balance + " So Unable to withdraw");
+            System.out.println("Only Balance is " + this.balance + " Unable to withdraw");
+            return false;
         }
         else {
             this.balance -= withAmt;
             System.out.println("withdrawal of " + withAmt + " AvbBal is " + this.balance);
+            return true;
         }
     }
 
 	public int getOverdraftLimit() {
-		System.out.println("overdraftLimit: " + overdraftLimit);
+		//System.out.println("overdraftLimit: " + overdraftLimit);
 		return overdraftLimit;
 	}
 

@@ -20,20 +20,22 @@ public class Account {
                 '}';
     }
 	public int getBalance() {
-		System.out.println("Balance= " + balance);
+		//System.out.println("Balance= " + balance);
 		return balance;
 	}
 	public int getAccNo() {
-		System.out.println("Acc. No. = " + accNo);
+		//System.out.println("Acc. No. = " + accNo);
 		return accNo;
 	}
 	
-	
+	public String getName() {
+		return name;
+	}
 	
 	
 	public static void main(String[] args) {
 		SavingsAccount Sa=new SavingsAccount(2000, 1234, "Sammy", 500);
-		Sa.getMinBal();
+		System.out.println(Sa.getMinBal());
 		Sa.withdraw(1400);
 		Sa.withdraw(200);
 		Sa.toString();
@@ -42,4 +44,6 @@ public class Account {
 		Ca.withdraw(2100);
 		Ca.withdraw(900);
 	}
+
+	
 }

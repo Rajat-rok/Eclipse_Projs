@@ -19,7 +19,7 @@ public class SavingsAccount extends Account {
     }
 
 	public int getMinBal() {
-		System.out.println("Min Bal: "+ minBal);
+		//System.out.println("Min Bal: "+ minBal);
 		return minBal;
 	}
 
